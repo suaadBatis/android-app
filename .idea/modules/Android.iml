@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="Android" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="Hungerstation" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":" />
+      </configuration>
+    </facet>
+    <facet type="java-gradle" name="Java-Gradle">
+      <configuration>
+        <option name="BUILD_FOLDER_PATH" value="$MODULE_DIR$/../../build" />
+        <option name="BUILDABLE" value="true" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../build/classes/java/main" />
+    <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../..">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../.gradle" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: org.testng:testng:6.9.10" level="project" />
+    <orderEntry type="library" name="Gradle: io.appium:java-client:6.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-java:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Gradle: com.beust:jcommander:1.48" level="project" />
+    <orderEntry type="library" name="Gradle: org.beanshell:bsh:2.0b4" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-chrome-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-edge-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-firefox-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-ie-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-opera-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-safari-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-support:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-remote-driver:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.seleniumhq.selenium:selenium-api:3.12.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.8.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-exec:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.5" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" name="Gradle: commons-validator:commons-validator:1.6" level="project" />
+    <orderEntry type="library" name="Gradle: commons-beanutils:commons-beanutils:1.9.2" level="project" />
+    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.4" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:23.6-jre" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.9" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okhttp3:okhttp:3.9.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" name="Gradle: cglib:cglib:3.2.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.7" level="project" />
+    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-context:5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.aspectj:aspectjweaver:1.9.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.openpnp:opencv:3.2.0-1" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:1.3.9" level="project" />
+    <orderEntry type="library" name="Gradle: org.checkerframework:checker-compat-qual:2.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.1.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:1.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.14" level="project" />
+    <orderEntry type="library" name="Gradle: org.ow2.asm:asm:6.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.ant:ant:1.9.6" level="project" />
+    <orderEntry type="library" name="Gradle: commons-digester:commons-digester:1.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: commons-collections:commons-collections:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.ant:ant-launcher:1.9.6" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="testng-6.9.10" level="project" />
+    <orderEntry type="library" exported="" name="java-client-6.1.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-java-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="junit-4.12" level="project" />
+    <orderEntry type="library" exported="" name="jcommander-1.48" level="project" />
+    <orderEntry type="library" exported="" name="bsh-2.0b4" level="project" />
+    <orderEntry type="library" exported="" name="selenium-chrome-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-edge-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-firefox-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-ie-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-opera-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-safari-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-support-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-remote-driver-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="selenium-api-3.12.0" level="project" />
+    <orderEntry type="library" exported="" name="byte-buddy-1.8.3" level="project" />
+    <orderEntry type="library" exported="" name="commons-exec-1.3" level="project" />
+    <orderEntry type="library" exported="" name="httpclient-4.5.5" level="project" />
+    <orderEntry type="library" exported="" name="commons-codec-1.10" level="project" />
+    <orderEntry type="library" exported="" name="commons-validator-1.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-beanutils-1.9.2" level="project" />
+    <orderEntry type="library" exported="" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" exported="" name="gson-2.8.4" level="project" />
+    <orderEntry type="library" exported="" name="guava-23.6-jre" level="project" />
+    <orderEntry type="library" exported="" name="httpcore-4.4.9" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-3.9.1" level="project" />
+    <orderEntry type="library" exported="" name="okio-1.13.0" level="project" />
+    <orderEntry type="library" exported="" name="hamcrest-core-1.3" level="project" />
+    <orderEntry type="library" exported="" name="cglib-3.2.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-lang3-3.7" level="project" />
+    <orderEntry type="library" exported="" name="commons-io-2.6" level="project" />
+    <orderEntry type="library" exported="" name="spring-context-5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="aspectjweaver-1.9.1" level="project" />
+    <orderEntry type="library" exported="" name="opencv-3.2.0-1" level="project" />
+    <orderEntry type="library" exported="" name="jsr305-1.3.9" level="project" />
+    <orderEntry type="library" exported="" name="checker-compat-qual-2.0.0" level="project" />
+    <orderEntry type="library" exported="" name="error_prone_annotations-2.1.3" level="project" />
+    <orderEntry type="library" exported="" name="j2objc-annotations-1.1" level="project" />
+    <orderEntry type="library" exported="" name="animal-sniffer-annotations-1.14" level="project" />
+    <orderEntry type="library" exported="" name="asm-6.0" level="project" />
+    <orderEntry type="library" exported="" name="ant-1.9.6" level="project" />
+    <orderEntry type="library" exported="" name="commons-digester-1.8.1" level="project" />
+    <orderEntry type="library" exported="" name="commons-collections-3.2.2" level="project" />
+    <orderEntry type="library" exported="" name="spring-aop-5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="spring-beans-5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="spring-expression-5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="spring-core-5.0.5.RELEASE" level="project" />
+    <orderEntry type="library" exported="" name="ant-launcher-1.9.6" level="project" />
+    <orderEntry type="library" exported="" name="spring-jcl-5.0.5.RELEASE" level="project" />
+  </component>
+</module>

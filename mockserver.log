@@ -1,0 +1,759 @@
+2019-03-10 14:19:04,084 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/json,body={
+	"address_id": 196875,
+	"branch_id": 2756,
+	"delivery_option": 3,
+	"local_id": 145,
+	"orderitems": [{
+		"count": 4,
+		"menuitem": {
+			"menugroup_id": 24037,
+			"name": "DON'T 2",
+			"name_en": "DON'T 2 test"
+		},
+		"menuitem_id": 104533,
+		"note": "",
+		"orderitem_link_modifiers": [154096, 146075],
+		"total_cost": 352.0
+	}],
+	"payment_method": {
+		"credit_card": {
+			"gateway_type": "checkout",
+			"id": 1938,
+			"name": "ibighi",
+			"number": "424242******4242",
+			"payment_type": "credit_card",
+			"status": "verified_on_gateway",
+			"type": "visa"
+		},
+		"title": "•••• 4242",
+		"type": "credit_card"
+	}
+},headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body={
+	"fee": 44.0,
+	"disclaimer_messages": ["جميع الأسعار تشمل٥٪ ضريبة القيمة المضافة"],
+	"cutback_minimum": null,
+	"preferred_payment_method": {
+		"method": "credit_card",
+		"credit_card_id": 1938
+	},
+	"payment_method": {
+		"credit_card": {
+			"gateway_type": "checkout",
+			"id": 1938,
+			"name": "ibighi",
+			"number": "424242******4242",
+			"payment_type": "credit_card",
+			"status": "verified_on_gateway",
+			"type": "visa"
+		},
+		"title": "•••• 4242",
+		"type": "credit_card"
+	},
+	"discount": null,
+	"referral_eligible": false,
+	"total_without_fee_without_discount": 352.0,
+	"promotion": null
+},cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:58) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 14:20:06,992 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/json,body="address_id": 196875,
+	"branch_id": 2756,
+	"delivery_option": 3,
+	"local_id": 145,
+	"orderitems": [{
+		"count": 4,
+		"menuitem": {
+			"menugroup_id": 24037,
+			"name": "DON'T 2",
+			"name_en": "DON'T 2 test"
+		},
+		"menuitem_id": 104533,
+		"note": "",
+		"orderitem_link_modifiers": [154096, 146075],
+		"total_cost": 352.0
+	}],
+	"payment_method": {
+		"credit_card": {
+			"gateway_type": "checkout",
+			"id": 1938,
+			"name": "ibighi",
+			"number": "424242******4242",
+			"payment_type": "credit_card",
+			"status": "verified_on_gateway",
+			"type": "visa"
+		},
+		"title": "•••• 4242",
+		"type": "credit_card"
+	},headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:56) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 14:27:57,873 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/json,body={name:},headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:28) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 15:05:55,047 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/json,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:31) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 16:52:03,522 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/json,body={},headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:31) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 16:52:19,977 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/json,body={},headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:31) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 17:01:18,629 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=POST,path=/api/v2/orders/,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:30) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 17:02:00,473 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=POST,path=/api/v2/orders/,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=Some response ,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:30) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 17:02:42,052 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=POST,path=/api/v2/orders/,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=Some response ,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:30) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 17:04:13,301 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=POST,path=/api/v2/orders/,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=Some response ,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:30) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 17:04:44,344 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=POST,path=/api/v2/orders/,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=Some response ,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.net.ConnectException: Connection refused
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:30) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.8.0_152-release]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717) ~[na:1.8.0_152-release]
+	at org.eclipse.jetty.io.SelectorManager.finishConnect(SelectorManager.java:257) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processConnect(SelectorManager.java:528) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.processKey(SelectorManager.java:501) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.select(SelectorManager.java:454) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.SelectorManager$ManagedSelector.run(SelectorManager.java:419) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-10 17:08:32,589 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=POST,path=/api/v2/orders/,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=Some response ,cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.io.EOFException
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at Place_order.setup(Place_order.java:30) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.io.EOFException: null
+	at org.eclipse.jetty.client.HttpReceiver.shutdown(HttpReceiver.java:125) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpReceiver.receive(HttpReceiver.java:84) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpConnection.receive(HttpConnection.java:319) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpConnection.onFillable(HttpConnection.java:307) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.run(AbstractConnection.java:240) ~[jetty-io-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-11 17:42:24,735 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/vat_invoices,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=[{
+    "id": 10,
+    "order_id": 1077388966,
+    "restaurant_name": "Mc donalds ",
+    "date_of_invoice": 1513840000,
+    "invoice_url": "https://hs-attachment-development.s3.eu-central-1.amazonaws.com/aYaOYCBOM2MA7i_u03T9fw.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISVNFOTP7I7K4DFQ%2F20171225%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20171225T074952Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=681b355e60df80bfd20dc3072677cd717623aa99dbbe724b6a232c0621e30621"
+  },
+  {
+    "id": 9,
+    "order_id": 1077388965,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513846288
+  },
+  {
+    "id": 8,
+    "order_id": 1077388964,
+    "restaurant_name": "XYZ",
+    "date_of_invoice": 1513846210
+  },
+  {
+    "id": 7,
+    "order_id": 1077388963,
+    "restaurant_name": "BurgerKing ",
+    "date_of_invoice": 1513845997
+  },
+  {
+    "id": 6,
+    "order_id": 1077388962,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513845836,
+    "invoice_url": "https://hs-attachment-development.s3.eu-central-1.amazonaws.com/7po9D0SWZDlWeyI3eWYGNQ.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISVNFOTP7I7K4DFQ%2F20171225%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20171225T074952Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=a7b05a6ce3b49d7bcc3bd1c8d0f73eda0701d0f7649cb880652833a92a564d8e"
+  },
+  {
+    "id": 5,
+    "order_id": 1077388961,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513845648
+  },
+  {
+    "id": 4,
+    "order_id": 1077388960,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513845610
+  }
+],cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.nio.channels.UnresolvedAddressException
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at SuaadTest.setup(SuaadTest.java:32) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.nio.channels.UnresolvedAddressException: null
+	at org.eclipse.jetty.util.SocketAddressResolver$1.run(SocketAddressResolver.java:155) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
+2019-03-11 17:43:20,483 ERROR [main] o.m.client.MockServerClient [MockServerClient.java:54] Exception sending expectation to MockServer as Expectation[httpRequest=HttpRequest[method=GET,path=/vat_invoices,body=,headers=[],parameters=[],cookies=[]],times=Times[remainingTimes=1,unlimited=true],httpResponse=HttpResponse[statusCode=200,body=[{
+    "id": 10,
+    "order_id": 1077388966,
+    "restaurant_name": "Mc donalds ",
+    "date_of_invoice": 1513840000,
+    "invoice_url": "https://hs-attachment-development.s3.eu-central-1.amazonaws.com/aYaOYCBOM2MA7i_u03T9fw.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISVNFOTP7I7K4DFQ%2F20171225%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20171225T074952Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=681b355e60df80bfd20dc3072677cd717623aa99dbbe724b6a232c0621e30621"
+  },
+  {
+    "id": 9,
+    "order_id": 1077388965,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513846288
+  },
+  {
+    "id": 8,
+    "order_id": 1077388964,
+    "restaurant_name": "XYZ",
+    "date_of_invoice": 1513846210
+  },
+  {
+    "id": 7,
+    "order_id": 1077388963,
+    "restaurant_name": "BurgerKing ",
+    "date_of_invoice": 1513845997
+  },
+  {
+    "id": 6,
+    "order_id": 1077388962,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513845836,
+    "invoice_url": "https://hs-attachment-development.s3.eu-central-1.amazonaws.com/7po9D0SWZDlWeyI3eWYGNQ.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISVNFOTP7I7K4DFQ%2F20171225%2Feu-central-1%2Fs3%2Faws4_request&X-Amz-Date=20171225T074952Z&X-Amz-Expires=900&X-Amz-SignedHeaders=host&X-Amz-Signature=a7b05a6ce3b49d7bcc3bd1c8d0f73eda0701d0f7649cb880652833a92a564d8e"
+  },
+  {
+    "id": 5,
+    "order_id": 1077388961,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513845648
+  },
+  {
+    "id": 4,
+    "order_id": 1077388960,
+    "restaurant_name": "KFC ",
+    "date_of_invoice": 1513845610
+  }
+],cookies=[],headers=[],delay=Delay[timeUnit=MICROSECONDS,value=0]]]
+java.util.concurrent.ExecutionException: java.nio.channels.UnresolvedAddressException
+	at org.eclipse.jetty.client.util.FutureResponseListener.getResult(FutureResponseListener.java:118) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.util.FutureResponseListener.get(FutureResponseListener.java:101) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.client.HttpRequest.send(HttpRequest.java:450) ~[jetty-client-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:48) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.MockServerClient.sendExpectation(MockServerClient.java:41) [mockserver-client-1.10.jar:na]
+	at org.mockserver.client.ForwardChainExpectation.respond(ForwardChainExpectation.java:22) [mockserver-client-1.10.jar:na]
+	at SuaadTest.setup(SuaadTest.java:32) [main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_152-release]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_152-release]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_152-release]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_152-release]
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12) [junit-4.12.jar:4.12]
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24) [junit-4.12.jar:4.12]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78) [junit-4.12.jar:4.12]
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137) [junit-4.12.jar:4.12]
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242) [junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70) [junit-rt.jar:na]
+java.nio.channels.UnresolvedAddressException: null
+	at org.eclipse.jetty.util.SocketAddressResolver$1.run(SocketAddressResolver.java:155) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:589) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:520) ~[jetty-util-9.0.0.v20130308.jar:9.0.0.v20130308]
+	at java.lang.Thread.run(Thread.java:745) ~[na:1.8.0_152-release]
